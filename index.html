@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murni Agustina Andini | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        sky: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-sky-50 text-slate-800 antialiased selection:bg-sky-200 selection:text-sky-900">
+
+    <nav class="fixed w-full z-50 glass-nav border-b border-sky-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl font-bold text-sky-600 tracking-tight">Murni<span class="text-slate-800">.</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-sky-600 px-3 py-2 text-sm font-medium transition">Home</a>
+                    <a href="#about" class="text-slate-600 hover:text-sky-600 px-3 py-2 text-sm font-medium transition">About</a>
+                    <a href="#experience" class="text-slate-600 hover:text-sky-600 px-3 py-2 text-sm font-medium transition">Experience</a>
+                    <a href="#projects" class="text-slate-600 hover:text-sky-600 px-3 py-2 text-sm font-medium transition">Projects</a>
+                    <a href="#skills" class="text-slate-600 hover:text-sky-600 px-3 py-2 text-sm font-medium transition">Skills</a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-full text-sm font-medium transition shadow-md shadow-sky-500/30">Contact Me</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-sky-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-sky-100 absolute w-full soft-shadow">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50">About</a>
+                <a href="#experience" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50">Experience</a>
+                <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50">Projects</a>
+                <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50">Skills</a>
+                <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-sky-600 hover:bg-sky-50">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-sky-100 text-sky-600 font-medium text-sm mb-6 border border-sky-200">
+                Class of 2025 • Universitas Cakrawala
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight mb-4">
+                Hi, I'm <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-sky-300">Murni Agustina Andini</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl text-slate-600 font-medium mb-6">
+                Digital Business Student | Copywriter | Economic Analyst|
+            </h2>
+            <p class="text-slate-500 mb-8 max-w-lg text-lg">
+                Combining creative storytelling, economic insights, and technical execution to build impactful digital business strategies.
+            </p>
+            <div class="flex gap-4">
+                <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-sky-500/40 flex items-center gap-2">
+                    Let's Collaborate <i class="fas fa-arrow-down text-sm"></i>
+                </a>
+                <a href="https://linkedin.com/in/murni-andini-163b6a2bb" target="_blank" class="bg-white hover:bg-sky-50 text-slate-700 border border-slate-200 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <i class="fab fa-linkedin text-sky-600 text-lg"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-2 bg-gradient-to-tr from-sky-300 to-sky-100 soft-shadow">
+                <img src="c:\Users\Asus\OneDrive\Pictures\my\fotoprofildokja.jpg" alt="Foto Profil Murni Agustina Andini" class="w-full h-full object-cover rounded-full border-4 border-white">
+                
+                <div class="absolute -bottom-4 -left-4 bg-white p-3 rounded-2xl shadow-lg border border-sky-50 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 font-medium">GPA</p>
+                        <p class="text-sm font-bold text-slate-800">3.83 / 4.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 relative inline-block">
+                    About Me
+                    <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-sky-400 rounded-full"></span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="bg-sky-50 p-8 rounded-3xl border border-sky-100 soft-shadow">
+                    <i class="fas fa-quote-left text-4xl text-sky-300 mb-4 opacity-50"></i>
+                    <p class="text-slate-600 leading-relaxed text-lg mb-6">
+                        I am a results-oriented Digital Business student with a proven track record in balancing rigorous academics with intensive professional experiences. During my first year of university, I successfully managed two concurrent copywriting internships while maintaining top-tier grades.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        I consistently exceed performance targets, producing over 15 SEO articles monthly. My approach is unique: I blend <strong class="text-sky-600 font-semibold">creative writing</strong> with <strong class="text-sky-600 font-semibold">economic analysis</strong> and <strong class="text-sky-600 font-semibold">technical project execution</strong> to formulate and implement impactful business strategies.
+                    </p>
+                </div>
+                
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-sky-500"></i> Education History
+                    </h3>
+                    
+                    <div class="relative pl-8 border-l-2 border-sky-200">
+                        <div class="absolute w-4 h-4 bg-sky-500 rounded-full -left-[9px] top-1 border-4 border-white"></div>
+                        <h4 class="text-xl font-bold text-slate-800">Universitas Cakrawala</h4>
+                        <p class="text-sky-600 font-medium mb-2">Bachelor of Digital Business | 2025 - Present (Jakarta)</p>
+                        <p class="text-slate-500 text-sm mb-2"><strong>GPA:</strong> 3.83/4.00</p>
+                        <p class="text-slate-600 text-sm"><strong>Key Courses:</strong> Financial Market & Fintech, Digital Marketing Analytics, Design Thinking, Intro to Economics, IT & Info Systems, Intro to Management.</p>
+                    </div>
+                    
+                    <div class="relative pl-8 border-l-2 border-sky-200">
+                        <div class="absolute w-4 h-4 bg-sky-300 rounded-full -left-[9px] top-1 border-4 border-white"></div>
+                        <h4 class="text-xl font-bold text-slate-800">SMA Swasta Bina Bangsa-01</h4>
+                        <p class="text-sky-600 font-medium mb-2">Natural Sciences Major | 2022 - 2025 (Central Kalimantan)</p>
+                        <p class="text-slate-600 text-sm">Built a strong foundation in analytical thinking and scientific methods prior to transitioning into the digital business sector.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-sky-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 relative inline-block">
+                    Professional Experience
+                    <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-sky-400 rounded-full"></span>
+                </h2>
+                <p class="mt-4 text-slate-500">Copywriting, Content Creation, and Social Media Strategy</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-sky-100 card-hover soft-shadow">
+                    <div class="flex justify-between items-start mb-4 flex-col sm:flex-row gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">SEO Content Writer Intern</h3>
+                            <p class="text-sky-600 font-medium">Inori Digital (Remote)</p>
+                        </div>
+                        <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Oct 2026 - Present</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
+                        <li>Engineered and executed daily content strategies by producing 3 high-quality SEO articles per day to scale company branding and organic web traffic.</li>
+                        <li>Implemented keyword research and On-Page SEO best practices (content structure, metadata optimization, and readability) to boost search engine rankings.</li>
+                        <li>Collaborated in a remote digital marketing environment to craft compelling brand narratives that strengthen the agency’s market authority and digital presence.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-sky-100 card-hover soft-shadow">
+                    <div class="flex justify-between items-start mb-4 flex-col sm:flex-row gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">Script Writer & Social Media Intern</h3>
+                            <p class="text-sky-600 font-medium">PT Solusi Talenta Internasional/Hirebox (WFO)</p>
+                        </div>
+                        <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Aug 2026 - Present</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
+                        <li>Uploaded 4 contents with different genres across various accounts, complete with 4 captions and 4 custom video cover designs.</li>
+                        <li>Served as an on-screen non-formal talent for company video campaigns while managing high-performance scriptwriting KPIs.</li>
+                        <li>Participated in daily intensive Mandarin language training to strengthen cross-cultural communication and regional market insights.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-sky-100 card-hover soft-shadow">
+                    <div class="flex justify-between items-start mb-4 flex-col sm:flex-row gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">Social Media Specialist Intern</h3>
+                            <p class="text-sky-600 font-medium">Optima Advertising (Remote)</p>
+                        </div>
+                        <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Jul 2026 - Sep 2026</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2 mb-4">
+                        <li>Managed social media content planning and creation remotely for the client project (Wi-Fi Sukma Solo) to boost local brand awareness.</li>
+                        <li>Developed and executed 10 strategic content scripts per month tailored to content pillars and ISP target audience.</li>
+                    </ul>
+                    <a href="https://drive.google.com/file/d/1Lpwwk1TYHsUZZUDakl4sR1pQk7ClsTnV/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 transition">
+                        Lihat Sertifikat Magang <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-sky-100 card-hover soft-shadow">
+                    <div class="flex justify-between items-start mb-4 flex-col sm:flex-row gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">Copywriting Intern</h3>
+                            <p class="text-sky-600 font-medium">Achmad Zaky Foundation (WFA)</p>
+                        </div>
+                        <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Feb 2026 - Apr 2026</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
+                        <li>Consistently exceeded weekly productivity targets by producing at least 2 strategic content pieces per week.</li>
+                        <li>Ensured 100% content alignment with the foundation's brand voice to build long-term positive organizational image.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-sky-100 card-hover soft-shadow">
+                    <div class="flex justify-between items-start mb-4 flex-col sm:flex-row gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">Copywriting Intern</h3>
+                            <p class="text-sky-600 font-medium">ACTalent Solutions Partners (Remote)</p>
+                        </div>
+                        <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Dec 2025 - Mar 2026</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2 mb-4">
+                        <li>Successfully achieved monthly targets by writing 15 SEO-based articles per month, driving organic website traffic.</li>
+                        <li>Conducted in-depth keyword research on HR and Technology topics to reach the appropriate professional audience.</li>
+                    </ul>
+                    <a href="https://drive.google.com/file/d/1902ACK0GcN27tiZKHB4tafpZpPdGVqy-/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 transition">
+                        Lihat Sertifikat Magang <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 relative inline-block">
+                    Projects & Business Analysis
+                    <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-sky-400 rounded-full"></span>
+                </h2>
+                <p class="mt-4 text-slate-500">Bridging digital strategy, economic analysis, and UI/UX.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+                <a href="https://drive.google.com/file/d/1g2T4_elkZ-ThgdSuYzUjW8Jjj9h5J3EX/view?usp=drive_link" target="_blank" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group">
+                    <div class="h-48 bg-sky-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="Orizon RootSync Project - Logistics & Supply Chain" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">UI/UX Basic & Business</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Orizon RootSync</h3>
+                        <p class="text-sm font-medium text-slate-500 mb-4">UI/UX Designer & Project Lead</p>
+                        <p class="text-sm text-slate-600 mb-4 flex-grow">Designed end-to-end user flows for a B2B Export & Logistics App, connecting local organic resources directly to international markets with a focus on fair trade and sustainability.</p>
+                        
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 mt-auto">
+                            Lihat Detail Dokumen <i class="fas fa-external-link-alt text-xs"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/file/d/13M3I9V3vDiVd9vtnGwsC-yl2ASFzaf_J/view?usp=sharing" target="_blank" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group">
+                    <div class="h-48 bg-sky-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop" alt="Economic Policy Analysis - Chart & Growth" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">Research</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Economic Policy Analysis</h3>
+                        <p class="text-sm font-medium text-slate-500 mb-4">Economic & Public Policy Analyst</p>
+                        <p class="text-sm text-slate-600 mb-4 flex-grow">Analyzed Market Failure in lobster seed exports and formulated Quota-Based Policy (TAC) recommendations. Evaluated oligopoly/cartel behavior using Game Theory (Prisoner's Dilemma).</p>
+                        
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 mt-auto">
+                            Lihat Detail Dokumen <i class="fas fa-external-link-alt text-xs"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1fIxr9epS0izEdft0TmE8uD1BsNTZj3gZ/view?usp=sharing" target="_blank" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group">
+                    <div class="h-48 bg-sky-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop" alt="Digmarnesia Startup - Meeting & Pitching" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">Startup / Business</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Digmarnesia</h3>
+                        <p class="text-sm font-medium text-slate-500 mb-4">Finance & Legal Specialist</p>
+                        <p class="text-sm text-slate-600 mb-4 flex-grow">Analyzed $6.5 Billion TAM for digital creator ecosystem in Indonesia. Developed financial strategies to achieve Break Even Point (BEP) of IDR 937.5 Million GMV by Month 12.</p>
+                        
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 mt-auto">
+                            Lihat Detail Dokumen <i class="fas fa-external-link-alt text-xs"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1iXHY6X8rBOE31EXuF6NHqb8iQ0Tl35xX/view?usp=drive_link" target="_blank" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group">
+                    <div class="h-48 bg-sky-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop" alt="Finnest App - Phone & Finance Apps" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">Fintech</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Finnest App</h3>
+                        <p class="text-sm font-medium text-slate-500 mb-4">Gen Z Fintech Dev Team</p>
+                        <p class="text-sm text-slate-600 mb-4 flex-grow">Implemented Design Thinking to design a transparent "Joint Savings" feature. Analyzed legality aspects (POJK and UU PDP) for Fintech compliance.</p>
+                        
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 mt-auto">
+                            Lihat Detail Dokumen <i class="fas fa-external-link-alt text-xs"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col lg:col-span-2 max-w-4xl mx-auto w-full">
+                    <div class="flex flex-col sm:flex-row h-full">
+                        <div class="sm:w-2/5 h-48 sm:h-auto bg-sky-100 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop" alt="CollabYours Business Plan - Bakery & Bread" class="w-full h-full object-cover">
+                        </div>
+                        <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2 block">Marketing & Strategy</span>
+                                <h3 class="text-xl font-bold text-slate-800 mb-1">CollabYours - F&B Business Plan</h3>
+                                <p class="text-sm font-medium text-slate-500 mb-4">Marketing Strategy & Design Thinking</p>
+                                <p class="text-sm text-slate-600 mb-6">Developed an innovative bakery business plan with detailed revenue projections growing from IDR 5 Billion in Year 1 to IDR 13 Billion by Year 5.</p>
+                            </div>
+                            
+                            <div>
+                                <a href="https://drive.google.com/file/d/16_EUE2W-VOM4XGcwk_i_fsp_-ZeTkG2b/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 transition">
+                                    Lihat Detail Dokumen <i class="fas fa-external-link-alt text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-sky-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-800 relative inline-block mb-10">
+                        Skills & Tools
+                        <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-sky-400 rounded-full"></span>
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-700 mb-3 flex items-center gap-2"><i class="fas fa-laptop-code text-sky-500"></i> Hard Skills</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white text-sky-700 border border-sky-200 rounded-lg text-sm font-medium shadow-sm">Copywriting</span>
+                                <span class="px-4 py-2 bg-white text-sky-700 border border-sky-200 rounded-lg text-sm font-medium shadow-sm">Content Writing</span>
+                                <span class="px-4 py-2 bg-white text-sky-700 border border-sky-200 rounded-lg text-sm font-medium shadow-sm">Basic Web Dev</span>
+                                <span class="px-4 py-2 bg-white text-sky-700 border border-sky-200 rounded-lg text-sm font-medium shadow-sm">Financial Management</span>
+                                <span class="px-4 py-2 bg-white text-sky-700 border border-sky-200 rounded-lg text-sm font-medium shadow-sm">Data Research</span>
+                                <span class="px-4 py-2 bg-white text-sky-700 border border-sky-200 rounded-lg text-sm font-medium shadow-sm">Graphic Design</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-700 mb-3 flex items-center gap-2"><i class="fas fa-users text-sky-500"></i> Soft Skills</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Leadership</span>
+                                <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Communication</span>
+                                <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Time Management</span>
+                                <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Adaptability</span>
+                                <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Fast Learner</span>
+                                <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Discipline</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-700 mb-3 flex items-center gap-2"><i class="fas fa-tools text-sky-500"></i> Technology</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">Python</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">SQL</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">Tableau</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">Canva</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">VScode</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">GitHub</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">Notion</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-sm">Ms. Office</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-700 mb-3 flex items-center gap-2"><i class="fas fa-language text-sky-500"></i> Languages</h3>
+                            <div class="flex flex-wrap gap-4 text-sm text-slate-600">
+                                <span><strong class="text-sky-700">Indonesian</strong> (Expert/Native)</span>
+                                <span><strong class="text-sky-700">English</strong> (Basic)</span>
+                                <span><strong class="text-sky-700">Japanese</strong> (Basic)</span>
+                                <span><strong class="text-sky-700">Mandarin</strong> (Basic)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-800 relative inline-block mb-10">
+                        Certifications & Workshops
+                        <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-sky-400 rounded-full"></span>
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg text-sky-500 mt-1">
+                                <i class="fab fa-python text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-slate-800">Samsung Innovation Campus (2025-2026)</h4>
+                                <p class="text-sky-600 text-sm font-medium mb-1">Python Programming</p>
+                                <p class="text-sm text-slate-500 mb-2">Studied fundamental algorithm logic and data structures using Python.</p>
+                                <a href="https://drive.google.com/file/d/1oiGHyRlEb0p0Pm3Fch0SMgdLkQFLoaxB/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700">
+                                    Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg text-sky-500 mt-1">
+                                <i class="fab fa-python text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-slate-800">Zenith Academy (30 May 2026)</h4>
+                                <p class="text-sky-600 text-sm font-medium mb-1">Python Basics for Data Analytics</p>
+                                <p class="text-sm text-slate-500 mb-2">Essential knowledge and practical skills in Python for effective data analytics and data-driven decision-making.</p>
+                                <a href="https://drive.google.com/file/d/1C0mM6Ns4salBRL9M9ndEgPVgS82rAMjH/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700">
+                                    Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg text-sky-500 mt-1">
+                                <i class="fas fa-chart-pie text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-slate-800">Zenith Academy (21 Jan 2026)</h4>
+                                <p class="text-sky-600 text-sm font-medium mb-1">Tableau for Smarter Decisions</p>
+                                <p class="text-sm text-slate-500 mb-2">Practical knowledge on leveraging Tableau to derive actionable insights from data for professional growth.</p>
+                                <a href="https://drive.google.com/file/d/1IWcG93fpCI6B95kdU5kYi8SsmvQ79hwk/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700">
+                                    Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg text-sky-500 mt-1">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-slate-800">Zenith Academy (27 Nov 2025)</h4>
+                                <p class="text-sky-600 text-sm font-medium mb-1">Indonesian Vizz Idol 2025</p>
+                                <p class="text-sm text-slate-500 mb-2">Participation as an audience member in the national data visualization competition held at Universitas Nasional Auditorium.</p>
+                                <a href="https://drive.google.com/file/d/1lX5mTl9DwX7mXkaJXh3H5Pl7HXU-Hq7Y/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700">
+                                    Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg text-sky-500 mt-1">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-slate-800">Seminar / Workshop (26 Sep 2025)</h4>
+                                <p class="text-sky-600 text-sm font-medium mb-1">Teamwork Makes the Dreams Work</p>
+                                <p class="text-sm text-slate-500 mb-2">Participation certificate focusing on collaboration, communication, and synergy in team environments.</p>
+                                <a href="https://drive.google.com/file/d/1tSEffZ2Sxvt0h3gq7_pttIYM04Ak3TfK/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700">
+                                    Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg text-sky-500 mt-1">
+                                <i class="fas fa-database text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">DataCamp (2026)</h4>
+                                <p class="text-sky-600 text-sm font-medium mb-1">Associate Data Analyst in SQL</p>
+                                <p class="text-sm text-slate-500">Mastered basic database queries for business data analysis needs.</p>
+                            </div>
+                        </div>
+                        
+
+                        <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg text-sky-500 mt-1">
+                                <i class="fas fa-calculator text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Mekari Jurnal (2025)</h4>
+                                <p class="text-sky-600 text-sm font-medium mb-1">Empowering Accounting with Digital Transformation</p>
+                                <p class="text-sm text-slate-500">Implementation of digital systems for modern accounting management efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gradient-to-b from-white to-sky-50 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl font-bold text-slate-800 mb-6">Let's Collaborate!</h2>
+            <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
+                I am ready to bring my analytical, creative, and technical skills to your team. Feel free to reach out to me for opportunities or collaborations.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <a href="mailto:murnisama587@gmail.com" class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow card-hover flex flex-col items-center">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-700">Email</span>
+                    <span class="text-xs text-slate-500 mt-1">murnisama587@gmail.com</span>
+                </a>
+                
+                <a href="https://linkedin.com/in/murni-andini-163b6a2bb" target="_blank" class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow card-hover flex flex-col items-center">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-700">LinkedIn</span>
+                    <span class="text-xs text-slate-500 mt-1 truncate w-full text-center">/in/murni-andini</span>
+                </a>
+                
+                <a href="tel:+6281351266602" class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow card-hover flex flex-col items-center">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-700">Phone</span>
+                    <span class="text-xs text-slate-500 mt-1">wa.me/6281351266602</span>
+                </a>
+                
+                <div class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow flex flex-col items-center">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-700">Location</span>
+                    <span class="text-xs text-slate-500 mt-1">Jakarta, Indonesia</span>
+                </div>
+            </div>
+            
+            <a href="mailto:murnisama587@gmail.com" class="inline-block bg-sky-500 hover:bg-sky-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-sky-500/40">
+                Send me an Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-sky-100 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 Murni Agustina Andini. Designed with <i class="fas fa-heart text-sky-400 mx-1"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('glass-nav', 'bg-white/95');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('bg-white/95', 'glass-nav');
+            }
+        });
+    </script>
+</body>
+</html>
