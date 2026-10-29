@@ -28,11 +28,16 @@
         .soft-shadow { box-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.15); }
         .card-hover { transition: all 0.3s ease; cursor: pointer; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.25); }
-        
+
         .modal { opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; }
         .modal.active { opacity: 1; visibility: visible; }
         .modal-content { transform: scale(0.95) translateY(20px); transition: all 0.3s ease-in-out; }
         .modal.active .modal-content { transform: scale(1) translateY(0); }
+
+        .modal-content::-webkit-scrollbar { width: 8px; }
+        .modal-content::-webkit-scrollbar-track { background: #f0f9ff; border-radius: 10px; }
+        .modal-content::-webkit-scrollbar-thumb { background: #bae6fd; border-radius: 10px; }
+        .modal-content::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
     </style>
 </head>
 <body class="bg-sky-50 text-slate-800 antialiased selection:bg-sky-200 selection:text-sky-900">
@@ -60,6 +65,7 @@
                 </div>
             </div>
         </div>
+
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-sky-100 absolute w-full soft-shadow">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50">About</a>
@@ -71,6 +77,7 @@
             </div>
         </div>
     </nav>
+
 
     <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
         <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
@@ -95,7 +102,7 @@
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
             <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-2 bg-gradient-to-tr from-sky-300 to-sky-100 soft-shadow">
-                <img src="./foto-profil.jpg" alt="Foto Profil Murni Agustina Andini" class="w-full h-full object-cover rounded-full border-4 border-white">                
+                <img src="./foto-profil.jpg" alt="Murni Agustina Andini Profile Picture" class="w-full h-full object-cover rounded-full border-4 border-white">                
                 <div class="absolute -bottom-4 -left-4 bg-white p-3 rounded-2xl shadow-lg border border-sky-50 flex items-center gap-3">
                     <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                         <i class="fas fa-chart-line"></i>
@@ -109,7 +116,6 @@
         </div>
     </section>
 
-    <!-- 1. ABOUT ME -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -238,12 +244,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm">
                 <h3 class="text-2xl font-bold text-slate-800 mb-2 text-center">Content Production Metrics & KPI Delivery</h3>
-                <p class="text-center text-slate-500 text-sm mb-8">Visualisasi produktivitas dan pencapaian target selama magang.</p>
+                <p class="text-center text-slate-500 text-sm mb-8">Visualizing productivity and target achievements during internships.</p>
                 <div class="space-y-6 max-w-4xl mx-auto">
                     <div>
                         <div class="flex justify-between text-sm font-medium text-slate-700 mb-1">
                             <span>Hirebox (Scripts per Week)</span>
-                            <span class="text-sky-600">25 Scripts</span>
+                            <span class="text-sky-600 font-bold">25 Scripts</span>
                         </div>
                         <div class="w-full bg-slate-100 rounded-full h-4">
                             <div class="bg-sky-500 h-4 rounded-full" style="width: 100%"></div>
@@ -252,7 +258,7 @@
                     <div>
                         <div class="flex justify-between text-sm font-medium text-slate-700 mb-1">
                             <span>Inori Digital (SEO Articles per Week)</span>
-                            <span class="text-sky-600">15 Articles</span>
+                            <span class="text-sky-600 font-bold">15 Articles</span>
                         </div>
                         <div class="w-full bg-slate-100 rounded-full h-4">
                             <div class="bg-sky-400 h-4 rounded-full" style="width: 60%"></div>
@@ -261,7 +267,7 @@
                     <div>
                         <div class="flex justify-between text-sm font-medium text-slate-700 mb-1">
                             <span>IN6 / ACTalent (Articles per Month)</span>
-                            <span class="text-sky-600">15 Articles</span>
+                            <span class="text-sky-600 font-bold">15 Articles</span>
                         </div>
                         <div class="w-full bg-slate-100 rounded-full h-4">
                             <div class="bg-sky-300 h-4 rounded-full" style="width: 60%"></div>
@@ -270,7 +276,7 @@
                     <div>
                         <div class="flex justify-between text-sm font-medium text-slate-700 mb-1">
                             <span>Optima Advertising (Scripts per Month)</span>
-                            <span class="text-sky-600">10 Scripts</span>
+                            <span class="text-sky-600 font-bold">10 Scripts</span>
                         </div>
                         <div class="w-full bg-slate-100 rounded-full h-4">
                             <div class="bg-sky-200 h-4 rounded-full" style="width: 40%"></div>
@@ -291,6 +297,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Skills -->
                 <div class="bg-sky-50 p-8 rounded-3xl border border-sky-100">
                     <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-sky-200 pb-2">Professional Skills</h3>
                     <div class="mb-8">
@@ -307,14 +314,13 @@
                     <div>
                         <h4 class="text-sm font-semibold text-slate-500 uppercase mb-3"><i class="fas fa-users text-sky-500"></i> Soft Skills</h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium">Leadership</span>
-                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium">Analytical Thinking</span>
-                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium">Time Management</span>
-                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium">Problem Solving</span>
+                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Leadership</span>
+                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Analytical Thinking</span>
+                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Time Management</span>
+                            <span class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium shadow-sm shadow-sky-300">Problem Solving</span>
                         </div>
                     </div>
                 </div>
-
 
                 <div class="bg-sky-50 p-8 rounded-3xl border border-sky-100" id="tools">
                     <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-sky-200 pb-2">Tools & Technology</h3>
@@ -354,44 +360,44 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between">
+     
+                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between hover:-translate-y-1 transition duration-300">
                     <div>
                         <div class="bg-sky-100 w-12 h-12 rounded-lg text-sky-500 flex items-center justify-center mb-4"><i class="fab fa-python text-2xl"></i></div>
                         <h4 class="font-bold text-slate-800 text-lg">Samsung Innovation Campus</h4>
                         <p class="text-sky-600 text-sm font-medium mb-2">Python Programming (2025-2026)</p>
                         <p class="text-sm text-slate-500 mb-4">Studied fundamental algorithm logic and data structures.</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1oiGHyRlEb0p0Pm3Fch0SMgdLkQFLoaxB/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start">
-                        Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                    <a href="https://drive.google.com/file/d/1oiGHyRlEb0p0Pm3Fch0SMgdLkQFLoaxB/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start transition">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
 
-                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between">
+                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between hover:-translate-y-1 transition duration-300">
                     <div>
                         <div class="bg-sky-100 w-12 h-12 rounded-lg text-sky-500 flex items-center justify-center mb-4"><i class="fab fa-python text-2xl"></i></div>
                         <h4 class="font-bold text-slate-800 text-lg">Zenith Academy</h4>
                         <p class="text-sky-600 text-sm font-medium mb-2">Python Basics for Data Analytics (May 2026)</p>
                         <p class="text-sm text-slate-500 mb-4">Practical skills in Python for effective data analytics.</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1C0mM6Ns4salBRL9M9ndEgPVgS82rAMjH/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start">
-                        Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                    <a href="https://drive.google.com/file/d/1C0mM6Ns4salBRL9M9ndEgPVgS82rAMjH/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start transition">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
 
-                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between">
+                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between hover:-translate-y-1 transition duration-300">
                     <div>
                         <div class="bg-sky-100 w-12 h-12 rounded-lg text-sky-500 flex items-center justify-center mb-4"><i class="fas fa-chart-pie text-2xl"></i></div>
                         <h4 class="font-bold text-slate-800 text-lg">Zenith Academy</h4>
                         <p class="text-sky-600 text-sm font-medium mb-2">Tableau for Smarter Decisions (Jan 2026)</p>
                         <p class="text-sm text-slate-500 mb-4">Leveraging Tableau to derive actionable insights.</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1IWcG93fpCI6B95kdU5kYi8SsmvQ79hwk/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start">
-                        Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                    <a href="https://drive.google.com/file/d/1IWcG93fpCI6B95kdU5kYi8SsmvQ79hwk/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start transition">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
 
-                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between">
+                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between hover:-translate-y-1 transition duration-300">
                     <div>
                         <div class="bg-sky-100 w-12 h-12 rounded-lg text-sky-500 flex items-center justify-center mb-4"><i class="fas fa-database text-2xl"></i></div>
                         <h4 class="font-bold text-slate-800 text-lg">DataCamp</h4>
@@ -400,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between">
+                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between hover:-translate-y-1 transition duration-300">
                     <div>
                         <div class="bg-sky-100 w-12 h-12 rounded-lg text-sky-500 flex items-center justify-center mb-4"><i class="fas fa-calculator text-2xl"></i></div>
                         <h4 class="font-bold text-slate-800 text-lg">Mekari Jurnal</h4>
@@ -409,15 +415,15 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between">
+                <div class="bg-white p-5 rounded-xl border border-sky-100 soft-shadow flex flex-col justify-between hover:-translate-y-1 transition duration-300">
                     <div>
                         <div class="bg-sky-100 w-12 h-12 rounded-lg text-sky-500 flex items-center justify-center mb-4"><i class="fas fa-award text-2xl"></i></div>
                         <h4 class="font-bold text-slate-800 text-lg">Indonesian Vizz Idol 2025</h4>
                         <p class="text-sky-600 text-sm font-medium mb-2">National Data Visualization (Nov 2025)</p>
                         <p class="text-sm text-slate-500 mb-4">Participation at Universitas Nasional Auditorium.</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1lX5mTl9DwX7mXkaJXh3H5Pl7HXU-Hq7Y/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start">
-                        Lihat Sertifikat <i class="fas fa-external-link-alt"></i>
+                    <a href="https://drive.google.com/file/d/1lX5mTl9DwX7mXkaJXh3H5Pl7HXU-Hq7Y/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 bg-sky-50 px-3 py-2 rounded-md self-start transition">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             </div>
@@ -431,14 +437,14 @@
                     Projects & Business Analysis
                     <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-sky-400 rounded-full"></span>
                 </h2>
-                <p class="mt-4 text-slate-500">Klik kartu proyek untuk melihat detail Alur Kerja, Eksekusi, dan Hasil Analisis.</p>
+                <p class="mt-4 text-slate-500">Click on any project card to view an in-depth case study (Mindmap, Workflow, TAM SAM SOM & Visual Data).</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+                
                 <div onclick="openModal('modal-orizon')" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group relative">
-                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-10 transition z-10 flex items-center justify-center">
-                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg">Lihat Studi Kasus</span>
+                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-20 transition z-10 flex items-center justify-center">
+                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-6 py-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg"><i class="fas fa-search-plus mr-2"></i> View Case Study</span>
                     </div>
                     <div class="h-48 bg-sky-100 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="Orizon RootSync" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -446,14 +452,13 @@
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">UI/UX & Business</span>
                         <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Orizon RootSync</h3>
-                        <p class="text-sm font-medium text-slate-500 mb-4">UI/UX Designer & Project Lead</p>
                         <p class="text-sm text-slate-600 mb-4 flex-grow">B2B Export & Logistics App connecting local organic resources directly to international markets.</p>
                     </div>
                 </div>
-
+-->
                 <div onclick="openModal('modal-economic')" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group relative">
-                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-10 transition z-10 flex items-center justify-center">
-                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg">Lihat Studi Kasus</span>
+                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-20 transition z-10 flex items-center justify-center">
+                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-6 py-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg"><i class="fas fa-search-plus mr-2"></i> View Case Study</span>
                     </div>
                     <div class="h-48 bg-sky-100 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop" alt="Economic Policy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -461,14 +466,13 @@
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">Research</span>
                         <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Economic Policy Analysis</h3>
-                        <p class="text-sm font-medium text-slate-500 mb-4">Economic & Public Policy Analyst</p>
-                        <p class="text-sm text-slate-600 mb-4 flex-grow">Market Failure analysis in lobster seed exports and Game Theory (Prisoner's Dilemma).</p>
+                        <p class="text-sm text-slate-600 mb-4 flex-grow">Market Failure analysis in lobster seed exports and Game Theory (Prisoner's Dilemma) modeling.</p>
                     </div>
                 </div>
 
                 <div onclick="openModal('modal-digmarnesia')" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group relative">
-                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-10 transition z-10 flex items-center justify-center">
-                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg">Lihat Studi Kasus</span>
+                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-20 transition z-10 flex items-center justify-center">
+                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-6 py-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg"><i class="fas fa-search-plus mr-2"></i> View Case Study</span>
                     </div>
                     <div class="h-48 bg-sky-100 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop" alt="Digmarnesia Startup" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -476,14 +480,13 @@
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">Startup / Business</span>
                         <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Digmarnesia</h3>
-                        <p class="text-sm font-medium text-slate-500 mb-4">Finance & Legal Specialist</p>
                         <p class="text-sm text-slate-600 mb-4 flex-grow">Market sizing for digital creator ecosystem in Indonesia and Break Even Point mapping.</p>
                     </div>
                 </div>
 
                 <div onclick="openModal('modal-finnest')" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col group relative">
-                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-10 transition z-10 flex items-center justify-center">
-                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg">Lihat Studi Kasus</span>
+                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-20 transition z-10 flex items-center justify-center">
+                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-6 py-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg"><i class="fas fa-search-plus mr-2"></i> View Case Study</span>
                     </div>
                     <div class="h-48 bg-sky-100 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop" alt="Finnest App" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -491,14 +494,13 @@
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2">Fintech</span>
                         <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover:text-sky-600 transition">Finnest App</h3>
-                        <p class="text-sm font-medium text-slate-500 mb-4">Gen Z Fintech Dev Team</p>
                         <p class="text-sm text-slate-600 mb-4 flex-grow">Design Thinking for transparent "Joint Savings" feature with legal POJK compliance.</p>
                     </div>
                 </div>
 
                 <div onclick="openModal('modal-collabyours')" class="bg-white rounded-2xl overflow-hidden border border-sky-100 card-hover soft-shadow flex flex-col lg:col-span-2 group relative">
-                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-10 transition z-10 flex items-center justify-center">
-                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-6 py-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg">Buka Analisis Bisnis (TAM SAM SOM)</span>
+                    <div class="absolute inset-0 bg-sky-900 bg-opacity-0 group-hover:bg-opacity-20 transition z-10 flex items-center justify-center">
+                        <span class="opacity-0 group-hover:opacity-100 bg-sky-500 text-white font-semibold px-8 py-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg"><i class="fas fa-chart-bar mr-2"></i> Open Business Analysis (Data & TAM SAM SOM)</span>
                     </div>
                     <div class="flex flex-col sm:flex-row h-full">
                         <div class="sm:w-2/5 h-48 sm:h-auto bg-sky-100 relative overflow-hidden">
@@ -507,7 +509,6 @@
                         <div class="sm:w-3/5 p-6 flex flex-col justify-center">
                             <span class="text-xs font-bold text-sky-500 uppercase tracking-wider mb-2 block">Marketing & Strategy</span>
                             <h3 class="text-2xl font-bold text-slate-800 mb-2 group-hover:text-sky-600 transition">CollabYours - F&B Business Plan</h3>
-                            <p class="text-sm font-medium text-slate-500 mb-4">Marketing Strategy & Design Thinking</p>
                             <p class="text-sm text-slate-600">Detailed bakery business plan with revenue projections, marketing frameworks, and operational strategies for scaling up.</p>
                         </div>
                     </div>
@@ -529,33 +530,22 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <a href="mailto:murnisama587@gmail.com" class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow card-hover flex flex-col items-center">
-                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4"><i class="fas fa-envelope"></i></div>
                     <span class="text-sm font-semibold text-slate-700">Email</span>
                     <span class="text-xs text-slate-500 mt-1">murnisama587@gmail.com</span>
                 </a>
-                
                 <a href="https://linkedin.com/in/murni-andini-163b6a2bb" target="_blank" class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow card-hover flex flex-col items-center">
-                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4"><i class="fab fa-linkedin"></i></div>
                     <span class="text-sm font-semibold text-slate-700">LinkedIn</span>
                     <span class="text-xs text-slate-500 mt-1 truncate w-full text-center">/in/murni-andini</span>
                 </a>
-                
                 <a href="tel:+6281351266602" class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow card-hover flex flex-col items-center">
-                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4"><i class="fas fa-phone-alt"></i></div>
                     <span class="text-sm font-semibold text-slate-700">Phone</span>
                     <span class="text-xs text-slate-500 mt-1">wa.me/6281351266602</span>
                 </a>
-                
                 <div class="bg-white p-6 rounded-2xl border border-sky-100 soft-shadow flex flex-col items-center">
-                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-sky-100 text-sky-500 rounded-full flex items-center justify-center text-xl mb-4"><i class="fas fa-map-marker-alt"></i></div>
                     <span class="text-sm font-semibold text-slate-700">Location</span>
                     <span class="text-xs text-slate-500 mt-1">Jakarta, Indonesia</span>
                 </div>
@@ -575,139 +565,409 @@
         </div>
     </footer>
 
+\
+    <div id="project-modal" class="fixed inset-0 bg-slate-900 bg-opacity-70 z-[60] flex items-center justify-center modal backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto modal-content relative shadow-2xl">
 
-    <div id="project-modal" class="fixed inset-0 bg-slate-900 bg-opacity-60 z-[60] flex items-center justify-center modal backdrop-blur-sm p-4">
-        <div class="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto modal-content relative shadow-2xl">
-            <button onclick="closeModal()" class="absolute top-4 right-4 bg-sky-100 text-sky-600 hover:bg-sky-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10">
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-slate-100 text-slate-500 hover:bg-rose-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors z-50">
                 <i class="fas fa-times text-lg"></i>
             </button>
-            
-            <div id="modal-body" class="p-8 sm:p-12">
+
+            <div id="modal-body" class="p-6 sm:p-12 relative">
 
             </div>
         </div>
     </div>
 
+ 
     <div id="modal-data" class="hidden">
         
         <div id="data-modal-orizon">
-            <span class="text-sm font-bold text-sky-500 uppercase tracking-wider">UI/UX Basic & Business</span>
-            <h2 class="text-3xl font-bold text-slate-800 mt-2 mb-6">Orizon RootSync</h2>
+            <div class="mb-8 border-b border-sky-100 pb-6">
+                <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3 inline-block">UI/UX Basic & Business</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">Orizon RootSync</h2>
+                <p class="text-slate-500 text-lg">B2B Export & Logistics App for Organic Resources & EUDR Compliance.</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-project-diagram text-sky-500"></i> Alur Kerja (Workflow)</h4>
-                    <p class="text-sm text-slate-600">Research Kebutuhan Eksportir ➔ Wireframing (Figma) ➔ Integrasi Konsep Sustainability (EUDR) ➔ Prototyping.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-project-diagram text-sky-500 mr-2"></i> Workflow & Mindmap</h3>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <div class="text-center p-4 bg-white rounded-xl shadow-sm border border-sky-100 w-full h-full flex flex-col justify-center">
+                    <i class="fas fa-search text-sky-400 text-2xl mb-2"></i>
+                    <p class="font-bold text-slate-700 text-sm">1. Requirement Research</p>
+                    <p class="text-xs text-slate-500 mt-1">Local exporter siloed data.</p>
                 </div>
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-tasks text-sky-500"></i> Eksekusi & Tindakan</h4>
-                    <p class="text-sm text-slate-600">Memimpin desain antarmuka (UI) dari awal hingga akhir, memastikan alur pengguna (user flow) B2B mudah digunakan oleh eksportir lokal untuk melacak rantai pasok.</p>
+                <i class="fas fa-arrow-right text-slate-300 hidden md:block text-xl shrink-0"></i>
+                <i class="fas fa-arrow-down text-slate-300 md:hidden text-xl shrink-0"></i>
+                <div class="text-center p-4 bg-white rounded-xl shadow-sm border border-sky-100 w-full h-full flex flex-col justify-center">
+                    <i class="fab fa-figma text-sky-400 text-2xl mb-2"></i>
+                    <p class="font-bold text-slate-700 text-sm">2. UI/UX Wireframing</p>
+                    <p class="text-xs text-slate-500 mt-1">Building B2B user-flow.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-green-200 shadow-sm shadow-green-100">
-                    <h4 class="font-bold text-green-700 flex items-center gap-2 mb-3"><i class="fas fa-chart-line"></i> Hasil (Impact)</h4>
-                    <p class="text-sm text-slate-600">Terciptanya prototype platform digital yang dapat melacak jejak karbon dan memfasilitasi transaksi perdagangan organik skala internasional.</p>
+                <i class="fas fa-arrow-right text-slate-300 hidden md:block text-xl shrink-0"></i>
+                <i class="fas fa-arrow-down text-slate-300 md:hidden text-xl shrink-0"></i>
+                <div class="text-center p-4 bg-white rounded-xl shadow-sm border border-sky-100 w-full h-full flex flex-col justify-center">
+                    <i class="fas fa-leaf text-sky-400 text-2xl mb-2"></i>
+                    <p class="font-bold text-slate-700 text-sm">3. EUDR Integration</p>
+                    <p class="text-xs text-slate-500 mt-1">Carbon footprint tracking.</p>
+                </div>
+                <i class="fas fa-arrow-right text-slate-300 hidden md:block text-xl shrink-0"></i>
+                <i class="fas fa-arrow-down text-slate-300 md:hidden text-xl shrink-0"></i>
+                <div class="text-center p-4 bg-sky-500 rounded-xl shadow-md border border-sky-600 w-full h-full text-white flex flex-col justify-center">
+                    <i class="fas fa-globe text-white text-2xl mb-2"></i>
+                    <p class="font-bold text-sm">4. Prototyping</p>
+                    <p class="text-xs mt-1 opacity-90">Ready for global market.</p>
                 </div>
             </div>
-            <div class="mt-8 text-center">
-                <a href="https://drive.google.com/file/d/1g2T4_elkZ-ThgdSuYzUjW8Jjj9h5J3EX/view?usp=drive_link" target="_blank" class="inline-block bg-sky-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-sky-600 transition">Lihat Detail Dokumen Proyek</a>
+
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-table text-sky-500 mr-2"></i> Feature & Solution Matrix</h3>
+            <div class="overflow-x-auto mb-10 border border-slate-200 rounded-xl">
+                <table class="w-full text-left border-collapse bg-white">
+                    <thead>
+                        <tr class="bg-sky-50 border-b border-slate-200 text-slate-700">
+                            <th class="p-4 font-semibold">Exporter Pain Points</th>
+                            <th class="p-4 font-semibold">Orizon RootSync Feature</th>
+                            <th class="p-4 font-semibold">Business Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-slate-600">
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4">Disconnected supply chain (asymmetric information).</td>
+                            <td class="p-4 font-medium text-sky-700">Blockchain Tracker</td>
+                            <td class="p-4">100% Transparency from farmers to global buyers.</td>
+                        </tr>
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4">Difficulty penetrating European market due to strict regulations.</td>
+                            <td class="p-4 font-medium text-sky-700">EUDR Compliance Auto-Audit</td>
+                            <td class="p-4">Meeting international organic export standards.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            <div class="mt-8 pt-8 border-t-2 border-dashed border-sky-200 bg-sky-50 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-slate-800 mb-2"><i class="fas fa-folder-open text-sky-500 mr-2"></i> Project Documentation & Assets</h3>
+                <p class="text-sm text-slate-500 mb-4">Access the full documentation, source files, and detailed analysis reports below.</p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <!-- PASTE YOUR EXTERNAL LINKS IN THE 'href' ATTRIBUTES BELOW -->
+                    <a href="https://drive.google.com/file/d/1g2T4_elkZ-ThgdSuYzUjW8Jjj9h5J3EX/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 bg-white border border-sky-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-100 hover:text-sky-700 transition">
+                        <i class="fab fa-google-drive text-sky-500"></i> Original Project Document (Drive)
+                    </a>
+                    <a href="#" target="_blank" class="inline-flex items-center gap-2 bg-white border border-sky-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-100 hover:text-sky-700 transition">
+                        <i class="fab fa-figma text-rose-500"></i> UI/UX Prototype (Figma)
+                    </a>
+                </div>
             </div>
         </div>
 
+
         <div id="data-modal-economic">
-            <span class="text-sm font-bold text-sky-500 uppercase tracking-wider">Research</span>
-            <h2 class="text-3xl font-bold text-slate-800 mt-2 mb-6">Economic Policy Analysis (Lobster Seed)</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-project-diagram text-sky-500"></i> Alur Kerja (Workflow)</h4>
-                    <p class="text-sm text-slate-600">Pengumpulan Data Ekspor ➔ Analisis Kegagalan Pasar ➔ Pemodelan Teori Permainan (Game Theory) ➔ Rekomendasi Kebijakan.</p>
+            <div class="mb-8 border-b border-sky-100 pb-6">
+                <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3 inline-block">Research & Economics</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">Economic Policy Analysis</h2>
+                <p class="text-slate-500 text-lg">Market Failure Analysis in Lobster Seed Exports using Game Theory Modeling.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-project-diagram text-sky-500 mr-2"></i> Analysis Workflow</h3>
+                    <ul class="space-y-4 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-sky-200 before:to-transparent">
+                        <li class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-sky-100 text-sky-500 font-bold z-10 shrink-0">1</div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl bg-white border border-slate-100 shadow-sm ml-4 md:ml-0 md:mr-4">
+                                <h4 class="font-bold text-slate-700 text-sm">Phenomenon Identification</h4>
+                                <p class="text-xs text-slate-500">Spike in uncontrolled wild lobster seed exploitation.</p>
+                            </div>
+                        </li>
+                        <li class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-sky-300 text-sky-700 font-bold z-10 shrink-0">2</div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl bg-white border border-slate-100 shadow-sm ml-4 md:ml-0 md:mr-0 md:ml-4">
+                                <h4 class="font-bold text-slate-700 text-sm">Cartel Testing (Oligopoly)</h4>
+                                <p class="text-xs text-slate-500">Modeling market players exploiting legal loopholes.</p>
+                            </div>
+                        </li>
+                        <li class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-sky-500 text-white font-bold z-10 shrink-0">3</div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl bg-white border border-slate-100 shadow-sm ml-4 md:ml-0 md:mr-4">
+                                <h4 class="font-bold text-slate-700 text-sm">TAC Recommendation</h4>
+                                <p class="text-xs text-slate-500">Quota-based Total Allowable Catch policy intervention.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-tasks text-sky-500"></i> Eksekusi & Tindakan</h4>
-                    <p class="text-sm text-slate-600">Mengevaluasi perilaku pasar oligopoli/kartel dalam ekspor benih lobster menggunakan metode <em>Prisoner's Dilemma</em>.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-green-200 shadow-sm shadow-green-100">
-                    <h4 class="font-bold text-green-700 flex items-center gap-2 mb-3"><i class="fas fa-chart-line"></i> Hasil (Impact)</h4>
-                    <p class="text-sm text-slate-600">Merumuskan rekomendasi Kebijakan Berbasis Kuota (Total Allowable Catch/TAC) untuk menstabilkan harga pasar dan menjaga ekosistem laut.</p>
+
+
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-chess-knight text-sky-500 mr-2"></i> Game Theory Matrix (Prisoner's Dilemma)</h3>
+                    <p class="text-sm text-slate-500 mb-4">Simulating decisions between Exporter A and B regarding legal vs illegal catch quotas.</p>
+                    <div class="overflow-hidden border border-slate-200 rounded-xl">
+                        <table class="w-full text-center border-collapse bg-white text-sm">
+                            <thead>
+                                <tr>
+                                    <th class="p-3 bg-slate-50 border-r border-b border-slate-200">Strategy</th>
+                                    <th class="p-3 bg-sky-50 border-b border-slate-200 text-sky-800">Exporter B (Complies with Quota)</th>
+                                    <th class="p-3 bg-rose-50 border-b border-slate-200 text-rose-800">Exporter B (Overfishing)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="p-3 bg-sky-50 border-r border-b border-slate-200 text-sky-800">Exporter A (Complies)</th>
+                                    <td class="p-3 border-r border-b border-slate-200 font-bold text-green-600 bg-green-50">(Stable Price, Safe Ecosystem)</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-500">(A Loses, B Profits Heavily)</td>
+                                </tr>
+                                <tr>
+                                    <th class="p-3 bg-rose-50 border-r border-slate-200 text-rose-800">Exporter A (Overfishing)</th>
+                                    <td class="p-3 border-r border-slate-200 text-slate-500">(A Profits Heavily, B Loses)</td>
+                                    <td class="p-3 bg-rose-100 font-bold text-rose-700">(Nash Equilibrium: Price Crashes, Ecosystem Destroyed)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="mt-8 text-center">
-                <a href="https://drive.google.com/file/d/13M3I9V3vDiVd9vtnGwsC-yl2ASFzaf_J/view?usp=sharing" target="_blank" class="inline-block bg-sky-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-sky-600 transition">Buka Dokumen Analisis Lengkap</a>
+
+            <div class="mt-8 pt-8 border-t-2 border-dashed border-sky-200 bg-sky-50 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-slate-800 mb-2"><i class="fas fa-folder-open text-sky-500 mr-2"></i> Project Documentation & Assets</h3>
+                <p class="text-sm text-slate-500 mb-4">Access the full documentation, source files, and detailed analysis reports below.</p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <!-- PASTE YOUR EXTERNAL LINKS IN THE 'href' ATTRIBUTES BELOW -->
+                    <a href="https://drive.google.com/file/d/13M3I9V3vDiVd9vtnGwsC-yl2ASFzaf_J/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-white border border-sky-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-100 hover:text-sky-700 transition">
+                        <i class="fab fa-google-drive text-sky-500"></i> Full Research Journal (Drive)
+                    </a>
+                </div>
             </div>
         </div>
 
         <div id="data-modal-digmarnesia">
-            <span class="text-sm font-bold text-sky-500 uppercase tracking-wider">Startup / Business</span>
-            <h2 class="text-3xl font-bold text-slate-800 mt-2 mb-6">Digmarnesia - Finance & Legal</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-project-diagram text-sky-500"></i> Alur Kerja (Workflow)</h4>
-                    <p class="text-sm text-slate-600">Riset Industri Kreator ➔ Kalkulasi TAM SAM SOM ➔ Strategi Finansial (BEP) ➔ Strukturisasi Legal.</p>
+            <div class="mb-8 border-b border-sky-100 pb-6">
+                <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3 inline-block">Startup / Finance</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">Digmarnesia</h2>
+                <p class="text-slate-500 text-lg">Market Valuation Analysis (Creator Economy) and Break Even Point (BEP) Mapping.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+                <div class="flex flex-col items-center justify-center">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 w-full text-left"><i class="fas fa-filter text-sky-500 mr-2"></i> Market Funnel (TAM SAM SOM)</h3>
+                    
+                    <div class="w-full bg-sky-700 text-white p-4 rounded-xl text-center shadow-md transform hover:scale-105 transition mb-1 relative">
+                        <span class="font-bold text-xl block mb-1">TAM</span>
+                        <span class="text-sm block opacity-90">Total Available Market: <strong>$6.5 Billion</strong></span>
+                        <span class="text-xs block opacity-75 mt-1">(Total Creator Economy Indonesia)</span>
+                    </div>
+                    <i class="fas fa-caret-down text-sky-300 text-2xl my-1"></i>
+                    
+                    <div class="w-[85%] bg-sky-500 text-white p-4 rounded-xl text-center shadow-md transform hover:scale-105 transition mb-1 relative">
+                        <span class="font-bold text-xl block mb-1">SAM</span>
+                        <span class="text-sm block opacity-90">Serviceable Available Market: <strong>$1.2 Billion</strong></span>
+                        <span class="text-xs block opacity-75 mt-1">(Education & Mid-level Creators)</span>
+                    </div>
+                    <i class="fas fa-caret-down text-sky-300 text-2xl my-1"></i>
+                    
+                    <div class="w-[70%] bg-sky-400 text-white p-4 rounded-xl text-center shadow-md transform hover:scale-105 transition relative">
+                        <span class="font-bold text-xl block mb-1">SOM</span>
+                        <span class="text-sm block opacity-90">Serviceable Obtainable Market: <strong>$50 Million</strong></span>
+                        <span class="text-xs block opacity-75 mt-1">(Realistic target for Year 1-3)</span>
+                    </div>
                 </div>
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-tasks text-sky-500"></i> Eksekusi & Tindakan</h4>
-                    <p class="text-sm text-slate-600">Melakukan perhitungan valuasi pasar untuk ekosistem kreator digital di Indonesia dan menyusun proyeksi keuangan tahun pertama.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-green-200 shadow-sm shadow-green-100">
-                    <h4 class="font-bold text-green-700 flex items-center gap-2 mb-3"><i class="fas fa-chart-line"></i> Hasil (TAM SAM SOM)</h4>
-                    <p class="text-sm text-slate-600"><strong>TAM:</strong> $6.5 Miliar (Creator Economy ID).<br><strong>BEP:</strong> Tercapai di Bulan ke-12 dengan Gross Merchandise Value (GMV) sebesar <strong>Rp 937,5 Juta</strong>.</p>
+
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-6"><i class="fas fa-chart-area text-sky-500 mr-2"></i> Break Even Point (BEP) Projection</h3>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 h-full flex flex-col justify-center">
+                        <div class="flex justify-between items-end h-40 mb-4 gap-2 border-b-2 border-slate-300 relative pb-2">
+
+                            <div class="w-1/4 bg-rose-300 rounded-t-sm relative group" style="height: 30%;">
+                                <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-500">M 3</span>
+                            </div>
+                            <div class="w-1/4 bg-rose-200 rounded-t-sm relative group" style="height: 50%;">
+                                <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-500">M 6</span>
+                            </div>
+                            <div class="w-1/4 bg-sky-300 rounded-t-sm relative group" style="height: 70%;">
+                                <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-500">M 9</span>
+                            </div>
+                            <div class="w-1/4 bg-green-500 rounded-t-sm relative shadow-lg shadow-green-200" style="height: 100%;">
+                                <span class="absolute -top-10 left-1/2 -translate-x-1/2 text-xs font-bold text-green-700 bg-green-100 px-2 py-1 rounded">BEP</span>
+                            </div>
+                            
+
+                            <div class="absolute w-full border-t-2 border-dashed border-sky-600 top-0 left-0"></div>
+                        </div>
+                        <div class="mt-4 bg-white p-4 rounded-lg border border-sky-100 shadow-sm text-center">
+                            <p class="text-sm text-slate-600 mb-1">Target <strong>Break Even Point (BEP)</strong> achieved in <strong>Month 12</strong>.</p>
+                            <p class="text-2xl font-bold text-sky-600">IDR 937,500,000 <span class="text-sm font-normal text-slate-500">/ GMV</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="mt-8 text-center">
-                <a href="https://drive.google.com/file/d/1fIxr9epS0izEdft0TmE8uD1BsNTZj3gZ/view?usp=sharing" target="_blank" class="inline-block bg-sky-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-sky-600 transition">Buka Pitch Deck / Dokumen Bisnis</a>
+
+            <div class="mt-8 pt-8 border-t-2 border-dashed border-sky-200 bg-sky-50 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-slate-800 mb-2"><i class="fas fa-folder-open text-sky-500 mr-2"></i> Project Documentation & Assets</h3>
+                <p class="text-sm text-slate-500 mb-4">Access the full documentation, source files, and detailed analysis reports below.</p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <!-- PASTE YOUR EXTERNAL LINKS IN THE 'href' ATTRIBUTES BELOW -->
+                    <a href="https://drive.google.com/file/d/1fIxr9epS0izEdft0TmE8uD1BsNTZj3gZ/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-white border border-sky-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-100 hover:text-sky-700 transition">
+                        <i class="fab fa-google-drive text-sky-500"></i> Open Pitch Deck
+                    </a>
+                    <a href="#" target="_blank" class="inline-flex items-center gap-2 bg-white border border-sky-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-100 hover:text-sky-700 transition">
+                        <i class="fas fa-file-excel text-green-600"></i> Financial Projection (Excel)
+                    </a>
+                </div>
             </div>
         </div>
 
         <div id="data-modal-finnest">
-            <span class="text-sm font-bold text-sky-500 uppercase tracking-wider">Fintech</span>
-            <h2 class="text-3xl font-bold text-slate-800 mt-2 mb-6">Finnest App</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-project-diagram text-sky-500"></i> Alur Kerja (Workflow)</h4>
-                    <p class="text-sm text-slate-600">Empathize (Perilaku Finansial Gen Z) ➔ Define ➔ Ideate ➔ Prototype (Fitur Tabungan Bersama) ➔ Legal Audit.</p>
+            <div class="mb-8 border-b border-sky-100 pb-6">
+                <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3 inline-block">Fintech & Compliance</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">Finnest App</h2>
+                <p class="text-slate-500 text-lg">"Joint Savings" Innovation for Gen-Z utilizing Design Thinking & Legal Audits (POJK).</p>
+            </div>
+
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-brain text-sky-500 mr-2"></i> Design Thinking Approach</h3>
+            <div class="flex flex-wrap md:flex-nowrap gap-3 mb-10">
+                <div class="flex-1 bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                    <h4 class="font-bold text-sky-700 mb-1">1. Empathize</h4>
+                    <p class="text-xs text-slate-500">Researching Gen Z collaborative financial pain points (e.g., shared vacation funds).</p>
                 </div>
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-tasks text-sky-500"></i> Eksekusi & Tindakan</h4>
-                    <p class="text-sm text-slate-600">Menerapkan <em>Design Thinking</em> untuk merancang fitur kolaboratif "Joint Savings" yang transparan, sekaligus mengaudit kepatuhan legal (POJK & UU PDP).</p>
+                <div class="flex-1 bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                    <h4 class="font-bold text-sky-700 mb-1">2. Define</h4>
+                    <p class="text-xs text-slate-500">Lack of transparency in conventional shared bank accounts.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-green-200 shadow-sm shadow-green-100">
-                    <h4 class="font-bold text-green-700 flex items-center gap-2 mb-3"><i class="fas fa-chart-line"></i> Hasil (Impact)</h4>
-                    <p class="text-sm text-slate-600">Sebuah arsitektur aplikasi fintech yang <em>user-centric</em> bagi Gen Z dan dijamin 100% mematuhi regulasi perlindungan data pribadi dan otoritas jasa keuangan Indonesia.</p>
+                <div class="flex-1 bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                    <h4 class="font-bold text-sky-700 mb-1">3. Ideate</h4>
+                    <p class="text-xs text-slate-500">Conceptualizing a "Joint Savings" feature with dual authorization.</p>
+                </div>
+                <div class="flex-1 bg-sky-50 p-4 rounded-xl border border-sky-200 text-center shadow-sm">
+                    <h4 class="font-bold text-sky-700 mb-1">4. Prototype & Legal</h4>
+                    <p class="text-xs text-slate-500">Developing UI/UX while adhering strictly to legal data boundaries.</p>
                 </div>
             </div>
-            <div class="mt-8 text-center">
-                <a href="https://drive.google.com/file/d/1iXHY6X8rBOE31EXuF6NHqb8iQ0Tl35xX/view?usp=drive_link" target="_blank" class="inline-block bg-sky-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-sky-600 transition">Lihat Dokumen Pengembangan</a>
+
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-balance-scale text-sky-500 mr-2"></i> Fintech Legal Compliance Matrix</h3>
+            <div class="overflow-x-auto mb-10 border border-slate-200 rounded-xl">
+                <table class="w-full text-left border-collapse bg-white">
+                    <thead>
+                        <tr class="bg-slate-100 border-b border-slate-300 text-slate-700">
+                            <th class="p-4 font-semibold">Indonesian Regulation</th>
+                            <th class="p-4 font-semibold">Application Challenge</th>
+                            <th class="p-4 font-semibold">Finnest Execution Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-slate-600">
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4 font-medium text-slate-800">UU PDP (Personal Data Protection)</td>
+                            <td class="p-4">Storing ID cards and transaction histories of two parties in one shared space.</td>
+                            <td class="p-4 text-green-600 font-medium">E2E Encryption and mandatory dual-consent authorization process.</td>
+                        </tr>
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4 font-medium text-slate-800">OJK Regulation (POJK)</td>
+                            <td class="p-4">Legal status of settled funds inside joint savings accounts.</td>
+                            <td class="p-4 text-green-600 font-medium">Partnering with registered Custodian Banks as fund guarantors (Escrow).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="mt-8 pt-8 border-t-2 border-dashed border-sky-200 bg-sky-50 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-slate-800 mb-2"><i class="fas fa-folder-open text-sky-500 mr-2"></i> Project Documentation & Assets</h3>
+                <p class="text-sm text-slate-500 mb-4">Access the full documentation, source files, and detailed analysis reports below.</p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <!-- PASTE YOUR EXTERNAL LINKS IN THE 'href' ATTRIBUTES BELOW -->
+                    <a href="https://drive.google.com/file/d/1iXHY6X8rBOE31EXuF6NHqb8iQ0Tl35xX/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 bg-white border border-sky-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-100 hover:text-sky-700 transition">
+                        <i class="fab fa-google-drive text-sky-500"></i> Open Design & Analysis Document
+                    </a>
+                </div>
             </div>
         </div>
 
+  
         <div id="data-modal-collabyours">
-            <span class="text-sm font-bold text-sky-500 uppercase tracking-wider">Marketing & Strategy</span>
-            <h2 class="text-3xl font-bold text-slate-800 mt-2 mb-6">CollabYours - F&B Business Plan</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-project-diagram text-sky-500"></i> Alur Kerja (Workflow)</h4>
-                    <p class="text-sm text-slate-600">Riset Pasar F&B (Bakery) ➔ Identifikasi Target Audience (SAM & SOM) ➔ Perumusan Strategi Pemasaran ➔ Proyeksi Keuangan 5 Tahun.</p>
+            <div class="mb-8 border-b border-sky-100 pb-6">
+                <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3 inline-block">Marketing & Business Plan</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">CollabYours F&B</h2>
+                <p class="text-slate-500 text-lg">Comprehensive Marketing Strategy & 5-Year Revenue Projection for Bakery Business.</p>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-bullseye text-sky-500 mr-2"></i> Market Penetration Strategy (4P)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-white border-l-4 border-sky-400 p-4 shadow-sm">
+                    <h4 class="font-bold text-slate-700 text-sm mb-1">Product</h4>
+                    <p class="text-xs text-slate-500">Local collaborative artisan bread with premium organic ingredients.</p>
                 </div>
-                <div class="bg-sky-50 p-6 rounded-2xl border border-sky-100">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-3"><i class="fas fa-tasks text-sky-500"></i> Eksekusi & Tindakan</h4>
-                    <p class="text-sm text-slate-600">Menyusun Business Plan komprehensif, mulai dari model operasional, kerangka desain pemikiran (Design Thinking), hingga pemodelan arus kas (Cash Flow).</p>
+                <div class="bg-white border-l-4 border-sky-500 p-4 shadow-sm">
+                    <h4 class="font-bold text-slate-700 text-sm mb-1">Price</h4>
+                    <p class="text-xs text-slate-500">Value-based pricing; affordable yet maintains healthy profit margins.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-green-200 shadow-sm shadow-green-100">
-                    <h4 class="font-bold text-green-700 flex items-center gap-2 mb-3"><i class="fas fa-chart-line"></i> Hasil Proyeksi Bisnis</h4>
-                    <p class="text-sm text-slate-600">Peta jalan bisnis yang solid dengan tren pertumbuhan omzet signifikan: memproyeksikan pendapatan <strong>Rp 5 Miliar (Tahun 1)</strong> yang meningkat hingga <strong>Rp 13 Miliar (Tahun 5)</strong>.</p>
+                <div class="bg-white border-l-4 border-sky-600 p-4 shadow-sm">
+                    <h4 class="font-bold text-slate-700 text-sm mb-1">Place</h4>
+                    <p class="text-xs text-slate-500">Omnichannel strategy (Aesthetic physical store + Online order via App).</p>
+                </div>
+                <div class="bg-white border-l-4 border-sky-700 p-4 shadow-sm">
+                    <h4 class="font-bold text-slate-700 text-sm mb-1">Promotion</h4>
+                    <p class="text-xs text-slate-500">KOL Marketing, Local SEO, and community pop-up events.</p>
                 </div>
             </div>
-            <div class="mt-8 text-center">
-                <a href="https://drive.google.com/file/d/16_EUE2W-VOM4XGcwk_i_fsp_-ZeTkG2b/view?usp=sharing" target="_blank" class="inline-block bg-sky-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-sky-600 transition">Buka Business Plan Lengkap</a>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fas fa-chart-bar text-sky-500 mr-2"></i> Revenue Projection (Year 1 - Year 5)</h3>
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 mb-10">
+                <div class="flex items-end justify-between h-48 gap-2 sm:gap-6 border-b-2 border-slate-300 pb-2">
+                    
+                    <div class="w-1/5 flex flex-col items-center group">
+                        <span class="text-xs sm:text-sm font-bold text-slate-600 mb-2 opacity-0 group-hover:opacity-100 transition">IDR 5B</span>
+                        <div class="w-full bg-sky-200 rounded-t-md transition-all group-hover:bg-sky-300" style="height: 38%;"></div>
+                        <span class="text-xs font-bold text-slate-500 mt-2">Year 1</span>
+                    </div>
+                   
+                    <div class="w-1/5 flex flex-col items-center group">
+                        <span class="text-xs sm:text-sm font-bold text-slate-600 mb-2 opacity-0 group-hover:opacity-100 transition">IDR 7B</span>
+                        <div class="w-full bg-sky-300 rounded-t-md transition-all group-hover:bg-sky-400" style="height: 53%;"></div>
+                        <span class="text-xs font-bold text-slate-500 mt-2">Year 2</span>
+                    </div>
+                   
+                    <div class="w-1/5 flex flex-col items-center group">
+                        <span class="text-xs sm:text-sm font-bold text-slate-600 mb-2 opacity-0 group-hover:opacity-100 transition">IDR 9B</span>
+                        <div class="w-full bg-sky-400 rounded-t-md transition-all group-hover:bg-sky-500" style="height: 69%;"></div>
+                        <span class="text-xs font-bold text-slate-500 mt-2">Year 3</span>
+                    </div>
+                    
+                    <div class="w-1/5 flex flex-col items-center group">
+                        <span class="text-xs sm:text-sm font-bold text-slate-600 mb-2 opacity-0 group-hover:opacity-100 transition">IDR 11B</span>
+                        <div class="w-full bg-sky-500 rounded-t-md transition-all group-hover:bg-sky-600" style="height: 84%;"></div>
+                        <span class="text-xs font-bold text-slate-500 mt-2">Year 4</span>
+                    </div>
+                    
+                    <div class="w-1/5 flex flex-col items-center group">
+                        <span class="text-xs sm:text-sm font-bold text-green-600 mb-2">IDR 13B</span>
+                        <div class="w-full bg-sky-600 rounded-t-md shadow-lg shadow-sky-200" style="height: 100%;"></div>
+                        <span class="text-xs font-bold text-slate-800 mt-2">Year 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t-2 border-dashed border-sky-200 bg-sky-50 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-slate-800 mb-2"><i class="fas fa-folder-open text-sky-500 mr-2"></i> Project Documentation & Assets</h3>
+                <p class="text-sm text-slate-500 mb-4">Access the full documentation, source files, and detailed analysis reports below.</p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <!-- PASTE YOUR EXTERNAL LINKS IN THE 'href' ATTRIBUTES BELOW -->
+                    <a href="https://drive.google.com/file/d/16_EUE2W-VOM4XGcwk_i_fsp_-ZeTkG2b/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-white border border-sky-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-100 hover:text-sky-700 transition">
+                        <i class="fab fa-google-drive text-sky-500"></i> Comprehensive Business Plan (Drive)
+                    </a>
+                </div>
             </div>
         </div>
 
     </div>
 
+
     <script>
+      
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -715,6 +975,7 @@
         btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
         mobileLinks.forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); }); });
 
+       
         const navbar = document.querySelector('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
@@ -726,10 +987,12 @@
             }
         });
 
+     
         const modal = document.getElementById('project-modal');
         const modalBody = document.getElementById('modal-body');
 
         function openModal(projectId) {
+        
             const template = document.getElementById('data-' + projectId).innerHTML;
             modalBody.innerHTML = template;
             modal.classList.add('active');
@@ -742,6 +1005,7 @@
             setTimeout(() => { modalBody.innerHTML = ''; }, 300);
         }
 
+        
         modal.addEventListener('click', function(e) {
             if (e.target === modal) { closeModal(); }
         });
